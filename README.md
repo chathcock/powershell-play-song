@@ -64,7 +64,7 @@ E,3,q,,
 Ds,3,hd,,End of second measure
 R,,w,,End of third measure
 ```
-Do not use commas in your notes.
+Do not use commas in your comments.
 
 ## License
 See the license file, both the script and the arrangemenet are in the public domain. Arrangement derived from [this arrangement](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=528), which is also in the public domain.
