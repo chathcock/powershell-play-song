@@ -11,7 +11,7 @@ $song = Import-Csv $sheet
 
 $note_values = @{
     C    = 16.35160
-    Cf   = 17.32391
+    Cs   = 17.32391
     Df   = 17.32391
     D    = 18.35405
     Ds   = 19.44544
