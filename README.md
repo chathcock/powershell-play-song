@@ -52,7 +52,7 @@ R,,w,,
 ```
 Note that the extra commas denote the blank BPM and Title columns. The octave is optional on a rest and will be ignored. You can leave it blank or fill in a number if it's convenient.
 
-### Empty Fields
+### Comments
 Note that since BPM and Title are only read on row 2 of the csv, you can use the BPM and Title columns to store instructions or other comments. Here's an example:
 ```
 Note,Octave,Value,BPM,Title
