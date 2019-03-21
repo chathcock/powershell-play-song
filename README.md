@@ -30,7 +30,7 @@ Valid notes are C, Cs/Df, D, Ds/Ef, E, F, Fs/Gf, G, Gs/Af, A, As/Bf, and B. A no
 Rests are indicated by an `R`. Octave data is skipped for rests but the value should be filled in to indicate its length.
 
 ### Octaves
-You can type any number you want here, but you'll get errors if you put anything lower than 1 on Ds or higher than 11 on C. This is because Console.Beep is limited to frequencies between 37 Hz and 32767 Hz.
+You can type any number you want here, but you'll get errors if you put anything lower than 1 on Ds or higher than 11 on C. This is because Console.Beep is limited to frequencies between 37 Hz and 32767 Hz. Middle C (C4) would be written as `C,4` and B♭3 would be written as `Bf,3`.
 
 ### Value
 ```
@@ -39,9 +39,10 @@ hd = 0.75   # dotted half note
 h  = 0.5    # half note
 qd = 0.375  # dotted quarter note
 q  = 0.25   # quarter note
-e  = 0.125  # eigth note
+e  = 0.125  # eighth note
 s  = 0.0625 # sixteenth note
 ```
+A middle C whole note would be written as `C,4,w` while an F♯3 eighth note would be written as `Fs,3,e`.
 
 ### Complete Syntax
 A C quarter note in octave 4 followed by a D sharp dotted half note in octave 3, followed by a full rest would look like this:
