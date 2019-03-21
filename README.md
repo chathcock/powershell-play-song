@@ -24,8 +24,10 @@ E,3,q,,
 F,3,q,,
 ```
 
-### Note Syntax
+### Notes
 Valid notes are C, Cs/Df, D, Ds/Ef, E, F, Fs/Gf, G, Gs/Af, A, As/Bf, and B. A note followed by an s is sharp and one followed by an f is flat. For example, C is just `C`, while B♭ is `Bf` and D♯ is `Ds`.
+
+Rests are indicated by an `R`. Octave data is skipped for rests but the value should be filled in to indicate its length.
 
 ### Octaves
 You can type any number you want here, but you'll get errors if you put anything lower than 1 on Ds or higher than 11 on C. This is because Console.Beep is limited to frequencies between 37 Hz and 32767 Hz.
@@ -41,13 +43,28 @@ e  = 0.125  # eigth note
 s  = 0.0625 # sixteenth note
 ```
 
-### Bringing it all together.
-A C quarter note in octave 4 followed by a D sharp dotted half note in octave 3 would look like this:
+### Complete Syntax
+A C quarter note in octave 4 followed by a D sharp dotted half note in octave 3, followed by a full rest would look like this:
 ```
 C,4,q,,
 Ds,3,hd,,
+R,,w,,
 ```
-Note that the extra commas denote the blank BPM and Title columns
+Note that the extra commas denote the blank BPM and Title columns. The octave is optional on a rest and will be ignored. You can leave it blank or fill in a number if it's convenient.
+
+### Empty Fields
+Note that since BPM and Title are only read on row 2 of the csv, you can use the BPM and Title columns to store instructions or other comments. Here's an example:
+```
+Note,Octave,Value,BPM,Title
+C,4,q,80,My Demo Song
+E,3,q,,
+E,3,q,,This part of the song is really repetive
+E,3,q,,End of first measure
+E,3,q,,
+Ds,3,hd,,End of second measure
+R,,w,,End of third measure
+```
+Do not use commas in your notes.
 
 ## License
 See the license file, both the script and the arrangemenet are in the public domain. Arrangement derived from [this arrangement](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=528), which is also in the public domain.
