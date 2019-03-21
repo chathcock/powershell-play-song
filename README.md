@@ -68,4 +68,4 @@ R,,w,,End of third measure
 Do not use commas in your comments.
 
 ## License
-See the license file. Please note that the Ode to Joy arrangement derived from [this arrangement](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=528), the scale demo, and any other samples files are also in the public domain.
+See the license file. Please note that the Ode to Joy arrangement derived from [this arrangement](https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=528), the scale demo, and any other sample files are also in the public domain.
