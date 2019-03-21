@@ -3,12 +3,9 @@ $song = Import-Csv $sheet
 
 # Define Constants
 # ====================================================
-# 
 # Notes
 # https://en.wikipedia.org/wiki/Piano_key_frequencies
-#
 # ====================================================
-
 $note_values = @{
     C    = 16.35160
     Cs   = 17.32391
@@ -29,30 +26,25 @@ $note_values = @{
     B    = 30.86771
 }
 # ====================================================
-#
 # Note durations
 # https://en.wikipedia.org/wiki/Note_value
-#
 # ====================================================
-
 $value = @{
     w  = 1      # whole note
     hd = 0.75   # dotted half note
     h  = 0.5    # half note
     qd = 0.375  # dotted quarter note
     q  = 0.25   # quarter note
-    e  = 0.125  # eigth note
+    e  = 0.125  # eighth note
     s  = 0.0625 # sixteenth note
 }
 # ====================================================
-
-
 $index = 1          # Initialize line counter
 $bpm = $song[0].BPM # BPM is imported from BPM column in song sheet.
 $duration = (60/$bpm)*4000 # A whole note is 4000ms at 60bpm and it scales linearly.
 "Now playing " + $song[0].Title # Announce the song
 
-# Song player
+# Play song
 forEach ($note in $song) {
     $length = $value[$note.Value]*$duration                        # Scale note length by bpm
     $pitch  = $note_values[$note.Note]*[math]::Pow(2,$note.Octave) # Lookup pitch on the table and scale it by the octave
